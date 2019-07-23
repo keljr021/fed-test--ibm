@@ -7,7 +7,7 @@ class Inspiration extends Component {
     render() {
 
         return (
-            <div>
+            <div className="mdl-grid">
                 [Inspiration section]
             </div>
         );

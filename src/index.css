@@ -10,7 +10,7 @@ code {
 }
 
 .contentbox {
-  padding-top: 60px;
+  padding: 60px 50px 0;
 }
 
 .head {
@@ -41,9 +41,9 @@ code {
 }
 
 .navbar {
-  width: calc(100% - 100px);
+  width: 100%;
   height: 20px;
-  padding: 10px 50px;
+  padding: 10px 0;
 }
 
 .navbar-menu {
