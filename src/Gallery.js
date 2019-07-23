@@ -7,7 +7,7 @@ class Gallery extends Component {
     render() {
 
         return (
-            <div>
+            <div className="mdl-grid">
                 [Gallery section]
             </div>
         );

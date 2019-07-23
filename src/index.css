@@ -39,3 +39,17 @@ code {
 .head-language select {
   width: 80%;
 }
+
+.navbar {
+  width: calc(100% - 100px);
+  height: 20px;
+  padding: 10px 50px;
+}
+
+.navbar-menu {
+  text-align: right;
+}
+
+.navbar-menu a {
+  padding: 0 10px;
+}
