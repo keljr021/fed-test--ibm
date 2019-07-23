@@ -15,11 +15,14 @@ class App extends Component {
     return (
       <div className="App">
         <Head />
-        <Navbar />
-        <Inspiration />
-        <Gallery />
-        <Episodes />
-        <Quote />
+
+        <div className="contentbox">
+          <Navbar />
+          <Inspiration />
+          <Gallery />
+          <Episodes />
+          <Quote />
+        </div>
       </div>
     );
   }
