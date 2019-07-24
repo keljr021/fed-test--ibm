@@ -75,3 +75,14 @@ code {
 .gallery-images {
   text-align: center;
 }
+
+.image-gallery {
+  margin: 0 auto;
+}
+
+.image-gallery-image img {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  max-height: 600px;
+}

@@ -1,24 +1,50 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
+
 import './App.css';
 
 class Gallery extends Component {
+    constructor(props) {
+        super(props);
+
+        this.loadImgArray = this.loadImgArray.bind(this);
+    }    
+
+    loadImgArray() {
+        const { gallery } = this.props;
+        let outputArray = [];
+
+        if (typeof gallery != 'undefined') {
+            for (let i = 0; i < gallery.length; i++) {
+                let image = gallery[i];
+
+                let imgObj = {
+                    original: image.src,
+                    description: image.text + (typeof image.reference !== 'undefined' ? `\r\n(Courtesy of ${image.reference})` : null)
+                };
+
+                outputArray.push(imgObj)
+            }
+        }
+
+        return outputArray;
+    }
 
     render() {
 
-        const { gallery } = this.props;
+        let imgArray = this.loadImgArray();
+        console.log(imgArray);
 
         return (
             <div id={"gallery"} className='gallery mdl-grid'>
                 <div className='gallery-title mdl-cell mdl-cell--12-col-desktop'>
                     <h4>Gallery</h4>
                 </div>
-                <div className='gallery-text mdl-cell mdl-cell--4-col-desktop'>
-                    <p>{(typeof gallery !== 'undefined') ? gallery[0].text : null}</p>
-                </div>
-                <div className='gallery-images mdl-cell mdl-cell--8-col-desktop'>
-                    <img alt='#' src={(typeof gallery !== 'undefined') ? gallery[0].src : null} />
-                </div>                     
+
+                <ImageGallery items={imgArray} lazyLoad={true} showBullets={true} showThumbnails={false}/>
+
             </div>
         );
     }
