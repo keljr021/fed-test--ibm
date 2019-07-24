@@ -7,8 +7,13 @@ class EpisodeSeason extends Component {
     render() {
 
         return (
-            <div>
-                [*Episode Season*]
+            <div className="episode-season mdl-cell mdl-cell--6-col-desktop">
+                <h6>Season #</h6>
+                <ul>
+                    <li>Episode #</li>
+                    <li>Episode #</li>
+                    <li>Episode #</li>
+                </ul>
             </div>
         );
     }

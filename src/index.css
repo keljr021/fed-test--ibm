@@ -54,6 +54,8 @@ code {
   padding: 0 10px;
 }
 
-.inspiration {
+.inspiration,
+.gallery,
+.episodes {
   text-align: left;
 }
