@@ -7,8 +7,8 @@ class Title extends Component {
     render() {
 
         return (
-            <div>
-                [Title here]
+            <div className="title">
+                <h3>Title Here</h3>
             </div>
         );
     }

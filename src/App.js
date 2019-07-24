@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Head from './Head';
 import Navbar from './Navbar';
+import Title from './Title';
 import Inspiration from './Inspiration';
 import Gallery from './Gallery';
 import Episodes from './Episodes';
@@ -18,8 +19,9 @@ class App extends Component {
 
         <div className="contentbox">
           <Navbar />
-          <Inspiration />
+          <Title />
           <Quote />
+          <Inspiration />
           <Gallery />
           <Episodes />
         </div>
