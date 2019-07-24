@@ -7,8 +7,23 @@ class Inspiration extends Component {
     render() {
 
         return (
-            <div className="mdl-grid">
-                [Inspiration section]
+            <div className="inspiration mdl-grid">
+                <div className="inspiration-title mdl-cell mdl-cell--12-col-desktop">
+                    <h4>Inspiration</h4>
+                </div>
+                <div className="inspiration-logo mdl-cell mdl-cell--6-col-desktop">
+                    <img alt="#" src="./images/stranger-things_raw.png" />
+                </div>
+                <div className="inspiration-head mdl-cell mdl-cell--6-col-desktop">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet luctus est nec vehicula. Sed id tellus hendrerit, condimentum dolor quis, feugiat ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit eros ipsum, vel suscipit metus laoreet vitae. Pellentesque sodales faucibus ultrices. Donec auctor varius purus. Aenean pellentesque non lacus quis fermentum.</p>
+                </div>                
+                <div className="inspiration-body mdl-cell mdl-cell--6-col-desktop">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet luctus est nec vehicula. Sed id tellus hendrerit, condimentum dolor quis, feugiat ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit eros ipsum, vel suscipit metus laoreet vitae. Pellentesque sodales faucibus ultrices. Donec auctor varius purus. Aenean pellentesque non lacus quis fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet luctus est nec vehicula. Sed id tellus hendrerit, condimentum dolor quis, feugiat ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit eros ipsum, vel suscipit metus laoreet vitae. Pellentesque sodales faucibus ultrices. Donec auctor varius purus. Aenean pellentesque non lacus quis fermentum.</p>
+                </div>
+                <div className="inspiration-video mdl-cell mdl-cell--6-col-desktop">
+                    <img alt="#" src="./images/stranger-things_raw.png" />
+                </div>                
             </div>
         );
     }
