@@ -19,9 +19,9 @@ class App extends Component {
         <div className="contentbox">
           <Navbar />
           <Inspiration />
+          <Quote />
           <Gallery />
           <Episodes />
-          <Quote />
         </div>
       </div>
     );

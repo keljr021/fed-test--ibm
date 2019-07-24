@@ -7,8 +7,14 @@ class Quote extends Component {
     render() {
 
         return (
-            <div>
-                [Quote here]
+            <div className="quote">
+                <div className="quote-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div className="quote-author">
+                    - John Doe
+                </div>
+
             </div>
         );
     }

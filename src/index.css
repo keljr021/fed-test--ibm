@@ -60,6 +60,14 @@ code {
   text-align: left;
 }
 
+.quote {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.75;
+  background: #666;
+  color: white;
+}
+
 .gallery-images {
   text-align: center;
 }
