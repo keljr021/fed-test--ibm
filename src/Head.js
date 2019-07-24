@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
 
 class Head extends Component {
 
     render() {
+        const { languages } = this.props;
 
         return (
             <div className="head">
@@ -13,8 +13,9 @@ class Head extends Component {
                 </div>
                 <div className="head-language">
                     <select>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
+                        {languages.map((language, key) =>
+                            <option value={language} key={key}>{language}</option>
+                        )}
                     </select>
                 </div>
                 

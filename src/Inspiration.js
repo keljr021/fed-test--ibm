@@ -20,7 +20,9 @@ class Inspiration extends Component {
                     <p>{desc}</p>
                 </div>                
                 <div className="inspiration-body mdl-cell mdl-cell--6-col-desktop">
-                    {snippets.map(snippet => <p>{snippet}</p>)}
+                    {snippets.map((snippet, key) => 
+                        <p key={key}>{snippet}</p>
+                    )}
                 </div>
                 <div className="inspiration-video mdl-cell mdl-cell--6-col-desktop">
                     <video width={"400"} controls={true}>

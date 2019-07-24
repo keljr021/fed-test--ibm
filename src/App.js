@@ -14,6 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
+      languages: ['A','B','C'],
       title: 'Title of Movie Here',
       quote: {
         text: 'This is quote text',
@@ -46,16 +47,27 @@ class App extends Component {
   }  
 
   componentDidMount() {
+    this.fetchData('en_US');
+  }
 
+  fetchData(language) {
+    axios.get('data/en_US.json')
+         .then(function(res) {
+          console.log(res);
+        });
+  }
+
+  changeLanguage(language) {
+    this.fetchData(language);
   }
 
   render() {
 
-    const { title, quote, desc, snippets, video, logo, gallery, episodes } = this.state;
+    const { languages, title, quote, desc, snippets, video, logo, gallery, episodes } = this.state;
 
     return (
       <div className="App">
-        <Head />
+        <Head languages={languages} changeLanguage={this.changeLanguage}/>
 
         <div className="contentbox">
           <Navbar />

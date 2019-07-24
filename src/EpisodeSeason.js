@@ -13,12 +13,14 @@ class EpisodeSeason extends Component {
                 <h6>Season {season}</h6>
 
                 <table>
-                    {episodes.map(episode =>
-                        <tr>
-                            <td>{episode.name}</td>
-                            <td>{episode.rating}</td>
-                        </tr>
-                    )}
+                    <tbody>
+                        {episodes.map((episode, key) =>
+                            <tr key={key}>
+                                <td>{episode.name}</td>
+                                <td>{episode.rating}</td>
+                            </tr>
+                        )}
+                    </tbody>
                 </table>
             </div>
         );
