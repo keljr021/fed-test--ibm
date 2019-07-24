@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
     this.state = { 
       languages: ['A','B','C'],
-      logo: 'images/stranger-things_raw.png'
+      logo: './images/stranger-things_raw.png'
     };
   }  
 
@@ -24,11 +24,12 @@ class App extends Component {
   }
 
   fetchData(language) {
+    let self = this;
     axios.get(`./data/${language}.json`)
          .then(function(res) {
           console.log(res);
 
-          this.setState({
+          self.setState({
             videoEmbed: res.data['video-embed'],
             episodeList: res.data['episode-list'],
             ...res.data

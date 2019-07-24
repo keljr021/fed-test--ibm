@@ -27,10 +27,7 @@ class Inspiration extends Component {
                     }
                 </div>
                 <div className='inspiration-video mdl-cell mdl-cell--6-col-desktop'>
-                    <video width={'400'} controls={true}>
-                        <source src={videoEmbed} type={'video/mp4'} />
-                        Your browser does not support HTML5 video.
-                    </video>
+                    <iframe src={videoEmbed} width="640" height="400" frameborder="0" allowfullscreen="true"></iframe>
                 </div>                
             </div>
         );
