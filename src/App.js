@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Head from './Head';
-import Navbar from './Navbar';
 import Title from './Title';
 import Inspiration from './Inspiration';
 import Gallery from './Gallery';
@@ -64,7 +63,6 @@ class App extends Component {
         <Head languages={languages} changeLanguage={this.changeLanguage}/>
 
         <div className='contentbox'>
-          <Navbar />
           <Title heading={heading} />
           <Inspiration description={description} snippets={snippets} videoEmbed={videoEmbed} logo={logo} />
           <Quote quote={quote} />
