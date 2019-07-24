@@ -47,11 +47,11 @@ class App extends Component {
   }  
 
   componentDidMount() {
-    this.fetchData('en_US');
+    this.fetchData(`en_US`);
   }
 
   fetchData(language) {
-    axios.get('data/en_US.json')
+    axios.get(`./data/${language}.json`)
          .then(function(res) {
           console.log(res);
         });
