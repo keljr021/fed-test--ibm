@@ -9,7 +9,7 @@ class Inspiration extends Component {
         const { videoEmbed, logo, description, snippets } = this.props;
 
         return (
-            <div className='inspiration mdl-grid'>
+            <div id={"inspiration"} className='inspiration mdl-grid'>
                 <div className='inspiration-title mdl-cell mdl-cell--12-col-desktop'>
                     <h4>Inspiration</h4>
                 </div>

@@ -9,7 +9,7 @@ class Gallery extends Component {
         const { gallery } = this.props;
 
         return (
-            <div className='gallery mdl-grid'>
+            <div id={"gallery"} className='gallery mdl-grid'>
                 <div className='gallery-title mdl-cell mdl-cell--12-col-desktop'>
                     <h4>Gallery</h4>
                 </div>

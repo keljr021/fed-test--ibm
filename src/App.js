@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Head from './Head';
 import Navbar from './Navbar';
 import Title from './Title';

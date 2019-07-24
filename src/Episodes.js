@@ -40,7 +40,7 @@ class Episodes extends Component {
         let seasonArray = (typeof episodeList != 'undefined') ? this.filterEachSeason(episodeList) : [];
 
         return (
-            <div className='episodes mdl-grid'>
+            <div id={"episodes"} className='episodes mdl-grid'>
                 <div className='episodes-title mdl-cell mdl-cell--12-col-desktop'>
                     <h4>Episodes</h4>
                 </div>
