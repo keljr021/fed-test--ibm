@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from './Navbar';
 
 class Head extends Component {
 
@@ -26,8 +25,6 @@ class Head extends Component {
                         )}
                     </select>
                 </div>
-
-                <Navbar />
                 
             </div>
         );
