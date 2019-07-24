@@ -40,7 +40,7 @@ class Gallery extends Component {
         return (
             <div id={"gallery"} className='gallery mdl-grid'>
                 <div className='gallery-title mdl-cell mdl-cell--12-col-desktop'>
-                    <h4>Gallery</h4>
+                    <h3>Gallery</h3>
                 </div>
 
                 <ImageGallery items={imgArray} lazyLoad={true} showBullets={true} showThumbnails={false}/>

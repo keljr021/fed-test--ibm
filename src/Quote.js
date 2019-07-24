@@ -11,7 +11,7 @@ class Quote extends Component {
         return (
             <div className='quote'>
                 <div className='quote-text'>
-                    {(quote) ? quote.text : null}
+                    {(quote) ? `"${quote.text}"` : null}
                 </div>
                 <div className='quote-author'>
                     - {(quote) ? quote.author : null}

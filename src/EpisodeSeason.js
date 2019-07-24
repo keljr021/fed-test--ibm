@@ -16,9 +16,12 @@ class EpisodeSeason extends Component {
                     <tbody>
                         {(typeof episodes !== 'undefined') ? 
                             episodes.map((episode, key) =>
-                                <tr key={key}>
-                                    <td width={"75%"}>{episode.name}</td>
-                                    <td width={"25%"}>{episode.rating}</td>
+                                <tr key={key} className="episode-season-item">
+                                    <td className="episode-season-item-name" width={"60%"}>{episode.name}</td>
+                                    <td className="episode-season-item-rating" width={"40%"}>
+                                        <i class="material-icons">star</i>
+                                        {episode.rating}
+                                    </td>
                                 </tr>
                             ) : null
                         }

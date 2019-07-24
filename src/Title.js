@@ -8,7 +8,7 @@ class Title extends Component {
 
         return (
             <div className='title'>
-                <h3>{this.props.heading}</h3>
+                <h2>{this.props.heading}</h2>
             </div>
         );
     }

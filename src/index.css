@@ -2,12 +2,14 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #eee;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 
 .contentbox {
   padding: 60px 50px 0;
@@ -19,16 +21,17 @@ code {
   padding: 20px;
   margin-bottom: 20px;
   position: fixed;
-  background: #fff;
+  background: #333;
   z-index: 9;
 }
 
 .head-title {
   width: 75%;
-  font-size: 40px; 
+  font-size: 30px; 
   float: left;
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Sigmar One', cursive;
   text-align: left;
+  color: #eee;
 }
 
 .head-language {
@@ -54,22 +57,45 @@ code {
 
 .navbar-menu a {
   padding: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
 }
 
 .navbar-menu .active {
-  color: orange;
+  color: #BF8743;
+  font-weight: bold;
 }
 
 .inspiration,
 .gallery,
 .episodes {
   text-align: left;
+  padding: 50px 0;
+}
+
+.inspiration-logo {
+  margin: 25px auto;
 }
 
 .quote {
-  width: 100%;
-  font-size: 16px;
+  width: 75%;
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
   line-height: 1.75;
+  text-align: left;
+  margin: 0 auto;
+  padding: 60px;
+  border-bottom: 1px solid #805A2D;
+}
+
+.quote-author {
+  font-style: italic;
+  font-size: 80%;
+  padding: 20px 0;
 }
 
 .gallery-images {
@@ -85,4 +111,20 @@ code {
   height: auto;
   max-width: 700px;
   max-height: 600px;
+}
+
+.episode-season td {
+  padding: 5px;
+  margin: 5px;
+}
+
+.episode-season-item-rating {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.episode-season-item-rating .material-icons {
+  padding: 0 5px;
+  font-size: 18px;
+  color: #a76c26;
 }

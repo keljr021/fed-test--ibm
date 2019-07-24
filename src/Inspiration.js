@@ -11,7 +11,7 @@ class Inspiration extends Component {
         return (
             <div id={"inspiration"} className='inspiration mdl-grid'>
                 <div className='inspiration-title mdl-cell mdl-cell--12-col-desktop'>
-                    <h4>Inspiration</h4>
+                    <h3>Inspiration</h3>
                 </div>
                 <div className='inspiration-logo mdl-cell mdl-cell--6-col-desktop'>
                     <img alt='#' src={`./images/${logo}`} />
