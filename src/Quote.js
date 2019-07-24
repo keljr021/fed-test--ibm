@@ -9,10 +9,10 @@ class Quote extends Component {
         return (
             <div className="quote">
                 <div className="quote-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    {this.props.quote.text}
                 </div>
                 <div className="quote-author">
-                    - John Doe
+                    - {this.props.quote.author}
                 </div>
 
             </div>

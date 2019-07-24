@@ -7,6 +7,8 @@ class Episodes extends Component {
 
     render() {
 
+        const { episodes } = this.props;
+
         return (
             <div className="episodes mdl-grid">
                 <div className="episodes-title mdl-cell mdl-cell--12-col-desktop">
@@ -14,9 +16,7 @@ class Episodes extends Component {
                 </div>
 
                 <div className="episodes-list mdl-cell mdl-cell--12-col-desktop mdl-grid">
-                    <EpisodeSeason />
-                    <EpisodeSeason />
-                    <EpisodeSeason />
+                    <EpisodeSeason season={1} episodes={episodes} />
                 </div>
 
             </div>

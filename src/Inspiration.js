@@ -6,23 +6,27 @@ class Inspiration extends Component {
 
     render() {
 
+        const { video, logo, desc, snippets } = this.props;
+
         return (
             <div className="inspiration mdl-grid">
                 <div className="inspiration-title mdl-cell mdl-cell--12-col-desktop">
                     <h4>Inspiration</h4>
                 </div>
                 <div className="inspiration-logo mdl-cell mdl-cell--6-col-desktop">
-                    <img alt="#" src="./images/stranger-things_raw.png" />
+                    <img alt="#" src={logo} />
                 </div>
                 <div className="inspiration-head mdl-cell mdl-cell--6-col-desktop">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet luctus est nec vehicula. Sed id tellus hendrerit, condimentum dolor quis, feugiat ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit eros ipsum, vel suscipit metus laoreet vitae. Pellentesque sodales faucibus ultrices. Donec auctor varius purus. Aenean pellentesque non lacus quis fermentum.</p>
+                    <p>{desc}</p>
                 </div>                
                 <div className="inspiration-body mdl-cell mdl-cell--6-col-desktop">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet luctus est nec vehicula. Sed id tellus hendrerit, condimentum dolor quis, feugiat ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit eros ipsum, vel suscipit metus laoreet vitae. Pellentesque sodales faucibus ultrices. Donec auctor varius purus. Aenean pellentesque non lacus quis fermentum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet luctus est nec vehicula. Sed id tellus hendrerit, condimentum dolor quis, feugiat ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut suscipit eros ipsum, vel suscipit metus laoreet vitae. Pellentesque sodales faucibus ultrices. Donec auctor varius purus. Aenean pellentesque non lacus quis fermentum.</p>
+                    {snippets.map(snippet => <p>{snippet}</p>)}
                 </div>
                 <div className="inspiration-video mdl-cell mdl-cell--6-col-desktop">
-                    <img alt="#" src="./images/stranger-things_raw.png" />
+                    <video width={"400"} controls={true}>
+                        <source src={video} type={"video/mp4"} />
+                        Your browser does not support HTML5 video.
+                    </video>
                 </div>                
             </div>
         );

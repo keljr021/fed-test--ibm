@@ -6,14 +6,20 @@ class EpisodeSeason extends Component {
 
     render() {
 
+        const { season, episodes } = this.props;
+
         return (
             <div className="episode-season mdl-cell mdl-cell--6-col-desktop">
-                <h6>Season #</h6>
-                <ul>
-                    <li>Episode #</li>
-                    <li>Episode #</li>
-                    <li>Episode #</li>
-                </ul>
+                <h6>Season {season}</h6>
+
+                <table>
+                    {episodes.map(episode =>
+                        <tr>
+                            <td>{episode.name}</td>
+                            <td>{episode.rating}</td>
+                        </tr>
+                    )}
+                </table>
             </div>
         );
     }
