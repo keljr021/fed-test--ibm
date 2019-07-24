@@ -20,13 +20,13 @@ code {
   margin-bottom: 20px;
   position: fixed;
   background: #fff;
-
 }
 
 .head-title {
   width: 75%;
-  font-size: 24px; 
+  font-size: 40px; 
   float: left;
+  font-family: 'Patrick Hand', cursive;
   text-align: left;
 }
 
@@ -52,6 +52,10 @@ code {
 
 .navbar-menu a {
   padding: 0 10px;
+}
+
+.navbar-menu .active {
+  color: orange;
 }
 
 .inspiration,
