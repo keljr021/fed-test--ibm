@@ -12,13 +12,13 @@ class EpisodeSeason extends Component {
             <div className="episode-season mdl-cell mdl-cell--6-col-desktop">
                 <h6>Season {num}</h6>
 
-                <table>
+                <table width={"100%"}>
                     <tbody>
                         {(typeof episodes !== 'undefined') ? 
                             episodes.map((episode, key) =>
                                 <tr key={key}>
-                                    <td>{episode.name}</td>
-                                    <td>{episode.rating}</td>
+                                    <td width={"75%"}>{episode.name}</td>
+                                    <td width={"25%"}>{episode.rating}</td>
                                 </tr>
                             ) : null
                         }
