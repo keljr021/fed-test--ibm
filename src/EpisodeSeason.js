@@ -14,12 +14,14 @@ class EpisodeSeason extends Component {
 
                 <table>
                     <tbody>
-                        {episodes.map((episode, key) =>
-                            <tr key={key}>
-                                <td>{episode.name}</td>
-                                <td>{episode.rating}</td>
-                            </tr>
-                        )}
+                        {(typeof episodes !== 'undefined') ? 
+                            episodes.map((episode, key) =>
+                                <tr key={key}>
+                                    <td>{episode.name}</td>
+                                    <td>{episode.rating}</td>
+                                </tr>
+                            ) : null
+                        }
                     </tbody>
                 </table>
             </div>

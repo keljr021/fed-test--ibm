@@ -14,10 +14,10 @@ class Gallery extends Component {
                     <h4>Gallery</h4>
                 </div>
                 <div className='gallery-text mdl-cell mdl-cell--4-col-desktop'>
-                    <p>{gallery[0].text}</p>
+                    <p>{(typeof gallery !== 'undefined') ? gallery[0].text : null}</p>
                 </div>
                 <div className='gallery-images mdl-cell mdl-cell--8-col-desktop'>
-                    <img alt='#' src={gallery[0].src} />
+                    <img alt='#' src={(typeof gallery !== 'undefined') ? gallery[0].src : null} />
                 </div>                     
             </div>
         );

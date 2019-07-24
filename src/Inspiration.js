@@ -6,7 +6,7 @@ class Inspiration extends Component {
 
     render() {
 
-        const { video, logo, description, snippets } = this.props;
+        const { videoEmbed, logo, description, snippets } = this.props;
 
         return (
             <div className='inspiration mdl-grid'>
@@ -20,13 +20,15 @@ class Inspiration extends Component {
                     <p>{description}</p>
                 </div>                
                 <div className='inspiration-body mdl-cell mdl-cell--6-col-desktop'>
-                    {snippets.map((snippet, key) => 
-                        <p key={key}>{snippet}</p>
-                    )}
+                    {(typeof snippets !== 'undefined') ?
+                        snippets.map((snippet, key) => 
+                            <p key={key}>{snippet}</p>
+                        ) : null
+                    }
                 </div>
                 <div className='inspiration-video mdl-cell mdl-cell--6-col-desktop'>
                     <video width={'400'} controls={true}>
-                        <source src={video} type={'video/mp4'} />
+                        <source src={videoEmbed} type={'video/mp4'} />
                         Your browser does not support HTML5 video.
                     </video>
                 </div>                

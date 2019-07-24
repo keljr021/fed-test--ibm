@@ -11,10 +11,10 @@ class Quote extends Component {
         return (
             <div className='quote'>
                 <div className='quote-text'>
-                    {quote.text}
+                    {(quote) ? quote.text : null}
                 </div>
                 <div className='quote-author'>
-                    - {quote.author}
+                    - {(quote) ? quote.author : null}
                 </div>
 
             </div>

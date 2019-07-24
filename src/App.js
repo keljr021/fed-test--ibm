@@ -14,8 +14,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      languages: ['A','B','C']
-    }
+      languages: ['A','B','C'],
+      logo: 'images/stranger-things_raw.png'
+    };
   }  
 
   componentDidMount() {
@@ -27,7 +28,11 @@ class App extends Component {
          .then(function(res) {
           console.log(res);
 
-          this.setState(res.data);
+          this.setState({
+            videoEmbed: res.data['video-embed'],
+            episodeList: res.data['episode-list'],
+            ...res.data
+          });
         });
   }
 
@@ -37,7 +42,7 @@ class App extends Component {
 
   render() {
 
-    const { languages, heading, quote, description, snippets, video, logo, gallery, episodes } = this.state;
+    const { languages, heading, quote, description, snippets, videoEmbed, logo, gallery, episodeList } = this.state;
 
     return (
       <div className='App'>
@@ -46,10 +51,10 @@ class App extends Component {
         <div className='contentbox'>
           <Navbar />
           <Title heading={heading} />
-          <Quote quote={{'text':'', 'author':''}} />
-          <Inspiration description={description} snippets={snippets} video={video} logo={logo} />
+          <Quote quote={quote} />
+          <Inspiration description={description} snippets={snippets} videoEmbed={videoEmbed} logo={logo} />
           <Gallery gallery={gallery} />
-          <Episodes episodes={episodes} />
+          <Episodes episodes={episodeList} />
         </div>
       </div>
     );
