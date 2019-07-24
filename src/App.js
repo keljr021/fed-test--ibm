@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
     this.state = { 
       languages: ['A','B','C'],
-      logo: './images/stranger-things_raw.png'
+      logo: 'stranger-things_raw.png'
     };
   }  
 
@@ -29,6 +29,7 @@ class App extends Component {
          .then(function(res) {
           console.log(res);
 
+          //Since the JSON properties were dashed, added videoEmbed and episodeList manually
           self.setState({
             videoEmbed: res.data['video-embed'],
             episodeList: res.data['episode-list'],
@@ -43,7 +44,7 @@ class App extends Component {
 
   render() {
 
-    const { languages, heading, quote, description, snippets, videoEmbed, logo, gallery, episodeList } = this.state;
+    const { languages, heading, quote, description, snippets, logo, videoEmbed, gallery, episodeList } = this.state;
 
     return (
       <div className='App'>
@@ -52,8 +53,8 @@ class App extends Component {
         <div className='contentbox'>
           <Navbar />
           <Title heading={heading} />
-          <Quote quote={quote} />
           <Inspiration description={description} snippets={snippets} videoEmbed={videoEmbed} logo={logo} />
+          <Quote quote={quote} />
           <Gallery gallery={gallery} />
           <Episodes episodes={episodeList} />
         </div>

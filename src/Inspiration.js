@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 import './App.css';
 
 class Inspiration extends Component {
@@ -14,7 +14,7 @@ class Inspiration extends Component {
                     <h4>Inspiration</h4>
                 </div>
                 <div className='inspiration-logo mdl-cell mdl-cell--6-col-desktop'>
-                    <img alt='#' src={logo} />
+                    <img alt='#' src={`./images/${logo}`} />
                 </div>
                 <div className='inspiration-head mdl-cell mdl-cell--6-col-desktop'>
                     <p>{description}</p>
