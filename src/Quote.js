@@ -6,13 +6,15 @@ class Quote extends Component {
 
     render() {
 
+        const { quote } = this.props;
+
         return (
-            <div className="quote">
-                <div className="quote-text">
-                    {this.props.quote.text}
+            <div className='quote'>
+                <div className='quote-text'>
+                    {quote.text}
                 </div>
-                <div className="quote-author">
-                    - {this.props.quote.author}
+                <div className='quote-author'>
+                    - {quote.author}
                 </div>
 
             </div>

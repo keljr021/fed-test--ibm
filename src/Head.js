@@ -7,11 +7,11 @@ class Head extends Component {
         const { languages } = this.props;
 
         return (
-            <div className="head">
-                <div className="head-title">
+            <div className='head'>
+                <div className='head-title'>
                     Couch Potato
                 </div>
-                <div className="head-language">
+                <div className='head-language'>
                     <select>
                         {languages.map((language, key) =>
                             <option value={language} key={key}>{language}</option>
