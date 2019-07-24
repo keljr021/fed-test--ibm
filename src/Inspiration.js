@@ -27,7 +27,7 @@ class Inspiration extends Component {
                     }
                 </div>
                 <div className='inspiration-video mdl-cell mdl-cell--6-col-desktop'>
-                    <iframe src={videoEmbed} width="640" height="400" frameborder="0" allowfullscreen="true"></iframe>
+                    <iframe src={videoEmbed} width={640} height={400} frameBorder={0} allowFullScreen={true}></iframe>
                 </div>                
             </div>
         );

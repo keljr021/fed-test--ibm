@@ -6,11 +6,11 @@ class EpisodeSeason extends Component {
 
     render() {
 
-        const { season, episodes } = this.props;
+        const { num, episodes } = this.props;
 
         return (
             <div className="episode-season mdl-cell mdl-cell--6-col-desktop">
-                <h6>Season {season}</h6>
+                <h6>Season {num}</h6>
 
                 <table>
                     <tbody>

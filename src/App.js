@@ -14,20 +14,32 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      languages: ['A','B','C'],
+      languages: [
+        {
+          name: 'English',
+          json_file: 'en_US'
+        },
+        {
+          name: 'Pig Latin',
+          json_file: 'la_PG'
+        },
+
+      ],
       logo: 'stranger-things_raw.png'
     };
+
+    this.fetchData = this.fetchData.bind(this);
+    this.changeLanguage = this.changeLanguage.bind(this);
   }  
 
   componentDidMount() {
     this.fetchData(`en_US`);
   }
 
-  fetchData(language) {
+  fetchData(language_file) {
     let self = this;
-    axios.get(`./data/${language}.json`)
+    axios.get(`./data/${language_file}.json`)
          .then(function(res) {
-          console.log(res);
 
           //Since the JSON properties were dashed, added videoEmbed and episodeList manually
           self.setState({
@@ -38,8 +50,8 @@ class App extends Component {
         });
   }
 
-  changeLanguage(language) {
-    this.fetchData(language);
+  changeLanguage(language_file) {
+    this.fetchData(language_file);
   }
 
   render() {
@@ -56,7 +68,7 @@ class App extends Component {
           <Inspiration description={description} snippets={snippets} videoEmbed={videoEmbed} logo={logo} />
           <Quote quote={quote} />
           <Gallery gallery={gallery} />
-          <Episodes episodes={episodeList} />
+          <Episodes episodeList={episodeList} />
         </div>
       </div>
     );
