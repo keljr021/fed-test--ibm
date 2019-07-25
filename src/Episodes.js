@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import EpisodeSeason from './EpisodeSeason';
 import './App.css';
 
@@ -41,11 +40,11 @@ class Episodes extends Component {
 
         return (
             <div id={"episodes"} className='episodes mdl-grid'>
-                <div className='episodes-title mdl-cell mdl-cell--12-col-desktop'>
+                <div className='episodes-title mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet'>
                     <h3>Episodes</h3>
                 </div>
 
-                <div className='episodes-list mdl-cell mdl-cell--12-col-desktop mdl-grid'>
+                <div className='episodes-list mdl-cell mdl-cell--12-col-desktop  mdl-cell--8-col-tablet mdl-grid'>
                     {
                         seasonArray.map((season, key) => 
                             <EpisodeSeason key={key} num={season.num} episodes={season.episodes} />    

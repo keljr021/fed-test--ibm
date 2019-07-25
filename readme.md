@@ -1,3 +1,5 @@
+This is the Front-End Development test for IBM. Emulates a movie site; with images, a video, gallery.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -35,7 +34,6 @@ class Gallery extends Component {
     render() {
 
         let imgArray = this.loadImgArray();
-        console.log(imgArray);
 
         return (
             <div id={"gallery"} className='gallery mdl-grid'>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 class Head extends Component {
 
@@ -11,7 +10,7 @@ class Head extends Component {
     }
 
     render() {
-        const { languages, changeLanguage } = this.props;
+        const { languages } = this.props;
 
         return (
             <div className='head'>
